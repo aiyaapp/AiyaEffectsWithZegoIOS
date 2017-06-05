@@ -1,7 +1,7 @@
 {
   "format" : "1",
-  "name":"小狗",
-  "resid":"gougou",
+  "name":"狗狗",
+  "resid" : "300302",
   "nodes" : [
     {
       "type":"2dAnim",

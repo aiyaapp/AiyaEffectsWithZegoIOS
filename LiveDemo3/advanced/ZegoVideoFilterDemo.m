@@ -8,7 +8,7 @@
 #import "ZegoVideoFilterDemo.h"
 #import <ZegoImageFilter/ZegoImageFilter.h>
 #import "ZegoLiveApi-utils.h"
-#import <AiyaCameraSDK/AiyaEffectProcess.h>
+#import <AiyaCameraSDK/AiyaCameraSDK.h>
 
 @interface ZegoVideoFilterDemo()
 @property (atomic) int pendingCount;
@@ -46,7 +46,7 @@
     queue_ = dispatch_queue_create("video.filter", nil);
     dispatch_async(queue_, ^ {
         aiyaEffectProcess = [[AiyaEffectProcess alloc]init];
-        aiyaEffectProcess.beautyLevel = AIYA_BEAUTY_LEVEL_8;
+        aiyaEffectProcess.beautyLevel = AIYA_BEAUTY_LEVEL_5;
         aiyaEffectProcess.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
         aiyaEffectProcess.effectPlayCount = 0;
         //        filter_ = [[ZegoImageFilter alloc] init];

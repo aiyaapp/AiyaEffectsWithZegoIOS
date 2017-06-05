@@ -11,6 +11,7 @@
 #import <OpenGLES/EAGL.h>
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
+#import <AiyaCameraSDK/AiyaCameraSDK.h>
 
 @interface ZegoRenderViewController () <ZegoLiveApiRenderDelegate>
 
@@ -47,6 +48,8 @@
     // Do any additional setup after loading the view.
     is_inited_ = false;
 
+    [AiyaLicenseManager initLicense:@""];
+    
     [getZegoAV_ShareInstance() setRenderDelegate:self];
     
     signal_ = dispatch_semaphore_create(1);
