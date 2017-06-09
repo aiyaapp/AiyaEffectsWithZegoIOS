@@ -70,6 +70,8 @@
     [client_ destroy];
     client_ = nil;
     buffer_pool_ = nil;
+    
+    aiyaEffectProcess = nil;
 }
 
 - (ZegoVideoBufferType)supportBufferType {
@@ -144,6 +146,8 @@
         CVPixelBufferRelease(output);
     });
 }
+
+
 
 @end
 
