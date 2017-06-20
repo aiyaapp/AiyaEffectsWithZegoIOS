@@ -46,9 +46,10 @@
     queue_ = dispatch_queue_create("video.filter", nil);
     dispatch_async(queue_, ^ {
         aiyaEffectProcess = [[AiyaEffectProcess alloc]init];
-        aiyaEffectProcess.beautyLevel = AIYA_BEAUTY_LEVEL_5;
-        aiyaEffectProcess.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
+        aiyaEffectProcess.beautyLevel = AIYA_BEAUTY_LEVEL_6;
+        aiyaEffectProcess.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"meihualu"];
         aiyaEffectProcess.effectPlayCount = 0;
+        aiyaEffectProcess.style = [UIImage imageNamed:@"purityLookup"];
         //        filter_ = [[ZegoImageFilter alloc] init];
         //        [filter_ create];
         //        [filter_ setCustomizedFilter:ZEGO_FILTER_BLACKWHITE];
