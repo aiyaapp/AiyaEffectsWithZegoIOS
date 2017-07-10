@@ -27,7 +27,7 @@
     int buffer_count_;
     
     //    ZegoImageFilter* filter_;
-    AiyaEffectProcess *aiyaEffectProcess;
+    AiyaEffectHandler *aiyaEffectHandler;
 }
 
 - (void)zego_allocateAndStart:(id<ZegoVideoFilterClient>) client {
@@ -45,14 +45,13 @@
     
     queue_ = dispatch_queue_create("video.filter", nil);
     dispatch_async(queue_, ^ {
-        aiyaEffectProcess = [[AiyaEffectProcess alloc]init];
-        aiyaEffectProcess.beautyLevel = AIYA_BEAUTY_LEVEL_6;
-        aiyaEffectProcess.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"meihualu"];
-        aiyaEffectProcess.effectPlayCount = 0;
-        aiyaEffectProcess.style = [UIImage imageNamed:@"purityLookup"];
-        //        filter_ = [[ZegoImageFilter alloc] init];
-        //        [filter_ create];
-        //        [filter_ setCustomizedFilter:ZEGO_FILTER_BLACKWHITE];
+        aiyaEffectHandler = [[AiyaEffectHandler alloc]init];
+        aiyaEffectHandler.beautyLevel = AIYA_BEAUTY_LEVEL_6;
+        aiyaEffectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
+        aiyaEffectHandler.effectPlayCount = 0;
+        aiyaEffectHandler.style = [UIImage imageNamed:@"purityLookup"];
+        aiyaEffectHandler.bigEyesScale = 1.0f;
+        aiyaEffectHandler.slimFaceScale = 1.0f;
     });
     
 }
@@ -72,7 +71,7 @@
     client_ = nil;
     buffer_pool_ = nil;
     
-    aiyaEffectProcess = nil;
+    aiyaEffectHandler = nil;
 }
 
 - (ZegoVideoBufferType)supportBufferType {
@@ -119,7 +118,7 @@
         // * 图像滤镜处理
         //        CVPixelBufferRef output = [filter_ render:pixel_buffer];
         
-        [aiyaEffectProcess processWithPixelBuffer:output];
+        [aiyaEffectHandler processWithPixelBuffer:output];
         
         int imageWidth = 0;
         int imageHeight = 0;
