@@ -46,7 +46,7 @@
     queue_ = dispatch_queue_create("video.filter", nil);
     dispatch_async(queue_, ^ {
         aiyaEffectHandler = [[AiyaEffectHandler alloc]init];
-        aiyaEffectHandler.beautyLevel = AIYA_BEAUTY_LEVEL_6;
+        aiyaEffectHandler.smoothSkinIntensity = 1;
         aiyaEffectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
         aiyaEffectHandler.effectPlayCount = 0;
         aiyaEffectHandler.style = [UIImage imageNamed:@"purityLookup"];

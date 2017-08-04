@@ -15,7 +15,6 @@
 		D37EFE221EE55B0900EC6679 /* AiyaCameraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37EFE211EE55B0900EC6679 /* AiyaCameraSDK.framework */; };
 		D37EFE401EE564F400EC6679 /* gougou in Resources */ = {isa = PBXBuildFile; fileRef = D37EFE3F1EE55FE800EC6679 /* gougou */; };
 		D3BA48BB1E77EFBE00AA7526 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA48BA1E77EFBE00AA7526 /* libc++.tbd */; };
-		D3BC81D21EF3E21B00E31D4B /* meihualu in Resources */ = {isa = PBXBuildFile; fileRef = D3BC81D11EF3E21B00E31D4B /* meihualu */; };
 		EF32D6F81D6599B700A764FC /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF32D6F51D6599B700A764FC /* TencentOpenApi_IOS_Bundle.bundle */; };
 		EF32D6FE1D659B5700A764FC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF32D6FD1D659B5700A764FC /* libstdc++.tbd */; };
 		EF32D7001D659B7200A764FC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF32D6FF1D659B7200A764FC /* libz.tbd */; };
@@ -110,7 +109,6 @@
 		D37EFE211EE55B0900EC6679 /* AiyaCameraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AiyaCameraSDK.framework; sourceTree = "<group>"; };
 		D37EFE3F1EE55FE800EC6679 /* gougou */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gougou; sourceTree = "<group>"; };
 		D3BA48BA1E77EFBE00AA7526 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		D3BC81D11EF3E21B00E31D4B /* meihualu */ = {isa = PBXFileReference; lastKnownFileType = folder; path = meihualu; sourceTree = "<group>"; };
 		EF1314361DAB752000FEBACF /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		EF1314461DAB752000FEBACF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EF1314611DAB7A7E00FEBACF /* ZegoAVKit2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZegoAVKit2.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/zegochatroom-dlvhhghawcmxmfenaqoryhfjbeck/Build/Products/iOS7StaticDebug-iphonesimulator/ZegoAVKit2.framework"; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				D37EFE3F1EE55FE800EC6679 /* gougou */,
-				D3BC81D11EF3E21B00E31D4B /* meihualu */,
 			);
 			name = AiyaEffectResources;
 			path = advanced/AiyaEffectResources;
@@ -651,7 +648,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3BC81D21EF3E21B00E31D4B /* meihualu in Resources */,
 				EF32D6F81D6599B700A764FC /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				EF9A38BF1D2A549000A5E996 /* ZegoLiveRoom.framework in Resources */,
 				EFFBF7681D38E378002FD7F2 /* Localizable.strings in Resources */,
