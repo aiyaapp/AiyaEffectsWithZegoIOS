@@ -43,15 +43,23 @@
     buffer_count_ = 4;
     self.pendingCount = 0;
     
+    [AiyaLicenseManager initLicense:@"" succ:^{
+        NSLog(@"验证成功");
+    } failed:^(NSString *errMsg) {
+        NSLog(@"验证失败");
+    }];
+    
     queue_ = dispatch_queue_create("video.filter", nil);
     dispatch_async(queue_, ^ {
+        
         aiyaEffectHandler = [[AiyaEffectHandler alloc]init];
         aiyaEffectHandler.smoothSkinIntensity = 1;
         aiyaEffectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
-        aiyaEffectHandler.effectPlayCount = 0;
+        aiyaEffectHandler.effectPlayCount = 200;
         aiyaEffectHandler.style = [UIImage imageNamed:@"purityLookup"];
         aiyaEffectHandler.bigEyesScale = 1.0f;
         aiyaEffectHandler.slimFaceScale = 1.0f;
+        
     });
     
 }
@@ -118,7 +126,11 @@
         // * 图像滤镜处理
         //        CVPixelBufferRef output = [filter_ render:pixel_buffer];
         
-        [aiyaEffectHandler processWithPixelBuffer:output];
+        AIYA_CAMERA_EFFECT_ERROR_CODE errorCode;
+        AIYA_EFFECT_STATUS effectStatus = [aiyaEffectHandler processWithPixelBuffer:output error:&errorCode];
+
+        NSLog(@"aiya_effectStatus : %lu",(unsigned long)effectStatus);
+        NSLog(@"aiya_errorCode : %lu",(unsigned long)errorCode);
         
         int imageWidth = 0;
         int imageHeight = 0;
