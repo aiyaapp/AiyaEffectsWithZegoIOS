@@ -11,8 +11,9 @@
 		A715498E1E1669AC00FBFACC /* ZegoLiveApi-utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A715498D1E1669AC00FBFACC /* ZegoLiveApi-utils.m */; };
 		A7C4F62C1DF8013E0027E9ED /* ZegoVideoFilterDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C4F62B1DF8013E0027E9ED /* ZegoVideoFilterDemo.m */; };
 		A7F824581DF8126A00E00683 /* ZegoImageFilter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7C4F6421DF8123C0027E9ED /* ZegoImageFilter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D37EFE201EE55AF700EC6679 /* AiyaCameraSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D37EFE1F1EE55AF700EC6679 /* AiyaCameraSDK.bundle */; };
-		D37EFE221EE55B0900EC6679 /* AiyaCameraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37EFE211EE55B0900EC6679 /* AiyaCameraSDK.framework */; };
+		D31F332E1FF3AB6800B042BD /* AiyaEffectSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31F331A1FF3AAEC00B042BD /* AiyaEffectSDK.framework */; };
+		D31F332F1FF3AB6800B042BD /* AiyaEffectSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D31F331A1FF3AAEC00B042BD /* AiyaEffectSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D37EFE201EE55AF700EC6679 /* AiyaEffectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D37EFE1F1EE55AF700EC6679 /* AiyaEffectSDK.bundle */; };
 		D37EFE401EE564F400EC6679 /* gougou in Resources */ = {isa = PBXBuildFile; fileRef = D37EFE3F1EE55FE800EC6679 /* gougou */; };
 		D3BA48BB1E77EFBE00AA7526 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA48BA1E77EFBE00AA7526 /* libc++.tbd */; };
 		EF32D6F81D6599B700A764FC /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF32D6F51D6599B700A764FC /* TencentOpenApi_IOS_Bundle.bundle */; };
@@ -69,6 +70,65 @@
 		EFFBF7681D38E378002FD7F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFFBF76B1D38E378002FD7F2 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D31F33191FF3AAEC00B042BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D37926EA1FCD081A007DB5E8;
+			remoteInfo = AiyaEffectSDK;
+		};
+		D31F331B1FF3AAEC00B042BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D37926F91FCD0892007DB5E8;
+			remoteInfo = AySDKCore;
+		};
+		D31F331D1FF3AAEC00B042BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D37927061FCD08A0007DB5E8;
+			remoteInfo = AyTrack;
+		};
+		D31F331F1FF3AAEC00B042BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D37927131FCD08AA007DB5E8;
+			remoteInfo = AyEffect;
+		};
+		D31F33211FF3AAEC00B042BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D37927201FCD08BB007DB5E8;
+			remoteInfo = AyBeauty;
+		};
+		D31F33231FF3AAEC00B042BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D379272D1FCD08DA007DB5E8;
+			remoteInfo = AyShortVideoEffect;
+		};
+		D31F33261FF3AB5900B042BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D37926E91FCD081A007DB5E8;
+			remoteInfo = AiyaEffectSDK;
+		};
+		D31F33301FF3AB6800B042BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D37926E91FCD081A007DB5E8;
+			remoteInfo = AiyaEffectSDK;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		EF1314601DAB752000FEBACF /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -88,6 +148,7 @@
 			files = (
 				EF9A38BE1D2A547F00A5E996 /* ZegoAVKit2.framework in Embed Frameworks */,
 				EF9A38BC1D2A546400A5E996 /* ZegoLiveRoom.framework in Embed Frameworks */,
+				D31F332F1FF3AB6800B042BD /* AiyaEffectSDK.framework in Embed Frameworks */,
 				A7F824581DF8126A00E00683 /* ZegoImageFilter.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -105,8 +166,8 @@
 		A7C4F6421DF8123C0027E9ED /* ZegoImageFilter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoImageFilter.framework; sourceTree = "<group>"; };
 		A7C4F6451DF8123C0027E9ED /* ZegoImageFilter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoImageFilter.framework; sourceTree = "<group>"; };
 		A7C4F6471DF8123C0027E9ED /* ZegoImageFilter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoImageFilter.framework; sourceTree = "<group>"; };
-		D37EFE1F1EE55AF700EC6679 /* AiyaCameraSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AiyaCameraSDK.bundle; sourceTree = "<group>"; };
-		D37EFE211EE55B0900EC6679 /* AiyaCameraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AiyaCameraSDK.framework; sourceTree = "<group>"; };
+		D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AiyaEffectSDK.xcodeproj; path = ../../../../AiyaEffectsIOS/AiyaEffectSDK/AiyaEffectSDK.xcodeproj; sourceTree = "<group>"; };
+		D37EFE1F1EE55AF700EC6679 /* AiyaEffectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AiyaEffectSDK.bundle; sourceTree = "<group>"; };
 		D37EFE3F1EE55FE800EC6679 /* gougou */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gougou; sourceTree = "<group>"; };
 		D3BA48BA1E77EFBE00AA7526 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		EF1314361DAB752000FEBACF /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
@@ -209,10 +270,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D37EFE221EE55B0900EC6679 /* AiyaCameraSDK.framework in Frameworks */,
 				D3BA48BB1E77EFBE00AA7526 /* libc++.tbd in Frameworks */,
 				4D5E1CE61D9BB0E000FFE6EB /* Bugly.framework in Frameworks */,
 				EF32D7091D659C7300A764FC /* libsqlite3.tbd in Frameworks */,
+				D31F332E1FF3AB6800B042BD /* AiyaEffectSDK.framework in Frameworks */,
 				EF32D7071D659C6A00A764FC /* CoreGraphics.framework in Frameworks */,
 				EF32D7051D659C6000A764FC /* SystemConfiguration.framework in Frameworks */,
 				EF32D7031D659C5400A764FC /* Security.framework in Frameworks */,
@@ -292,6 +353,19 @@
 			path = "ReleaseStatic-iphoneosAndRelease-iphonesimulator";
 			sourceTree = "<group>";
 		};
+		D31F33111FF3AAEC00B042BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D31F331A1FF3AAEC00B042BD /* AiyaEffectSDK.framework */,
+				D31F331C1FF3AAEC00B042BD /* libAySDKCore.a */,
+				D31F331E1FF3AAEC00B042BD /* libAyTrack.a */,
+				D31F33201FF3AAEC00B042BD /* libAyEffect.a */,
+				D31F33221FF3AAEC00B042BD /* libAyBeauty.a */,
+				D31F33241FF3AAEC00B042BD /* libAyShortVideoEffect.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D3BA48D71E77F00900AA7526 /* AiyaEffectResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,8 +378,8 @@
 		D3BA48DB1E77F00900AA7526 /* AiyaEffectSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D37EFE211EE55B0900EC6679 /* AiyaCameraSDK.framework */,
-				D37EFE1F1EE55AF700EC6679 /* AiyaCameraSDK.bundle */,
+				D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */,
+				D37EFE1F1EE55AF700EC6679 /* AiyaEffectSDK.bundle */,
 			);
 			name = AiyaEffectSDK;
 			path = advanced/AiyaEffectSDK;
@@ -594,6 +668,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				D31F33271FF3AB5900B042BD /* PBXTargetDependency */,
+				D31F33311FF3AB6800B042BD /* PBXTargetDependency */,
 			);
 			name = LiveDemo3;
 			productName = LiveDemo3;
@@ -636,12 +712,63 @@
 			mainGroup = EFF10EE91D1A297900ECE11E;
 			productRefGroup = EFF10EF31D1A297900ECE11E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D31F33111FF3AAEC00B042BD /* Products */;
+					ProjectRef = D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EFF10EF11D1A297900ECE11E /* LiveDemo3 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D31F331A1FF3AAEC00B042BD /* AiyaEffectSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AiyaEffectSDK.framework;
+			remoteRef = D31F33191FF3AAEC00B042BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D31F331C1FF3AAEC00B042BD /* libAySDKCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAySDKCore.a;
+			remoteRef = D31F331B1FF3AAEC00B042BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D31F331E1FF3AAEC00B042BD /* libAyTrack.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAyTrack.a;
+			remoteRef = D31F331D1FF3AAEC00B042BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D31F33201FF3AAEC00B042BD /* libAyEffect.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAyEffect.a;
+			remoteRef = D31F331F1FF3AAEC00B042BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D31F33221FF3AAEC00B042BD /* libAyBeauty.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAyBeauty.a;
+			remoteRef = D31F33211FF3AAEC00B042BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D31F33241FF3AAEC00B042BD /* libAyShortVideoEffect.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAyShortVideoEffect.a;
+			remoteRef = D31F33231FF3AAEC00B042BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EFF10EF01D1A297900ECE11E /* Resources */ = {
@@ -654,7 +781,7 @@
 				EFE0D9281D1BB91F0090F719 /* ZegoAVKit2.framework in Resources */,
 				EFAC2FCF1D48E0AD000A7885 /* a.pcm in Resources */,
 				EFF10F081D1A297900ECE11E /* LaunchScreen.storyboard in Resources */,
-				D37EFE201EE55AF700EC6679 /* AiyaCameraSDK.bundle in Resources */,
+				D37EFE201EE55AF700EC6679 /* AiyaEffectSDK.bundle in Resources */,
 				D37EFE401EE564F400EC6679 /* gougou in Resources */,
 				EFF10F051D1A297900ECE11E /* Assets.xcassets in Resources */,
 				EFF10F031D1A297900ECE11E /* Main.storyboard in Resources */,
@@ -702,6 +829,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D31F33271FF3AB5900B042BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AiyaEffectSDK;
+			targetProxy = D31F33261FF3AB5900B042BD /* PBXContainerItemProxy */;
+		};
+		D31F33311FF3AB6800B042BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AiyaEffectSDK;
+			targetProxy = D31F33301FF3AB6800B042BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EFF10F011D1A297900ECE11E /* Main.storyboard */ = {

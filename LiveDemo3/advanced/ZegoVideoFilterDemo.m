@@ -8,7 +8,7 @@
 #import "ZegoVideoFilterDemo.h"
 #import <ZegoImageFilter/ZegoImageFilter.h>
 #import "ZegoLiveApi-utils.h"
-#import <AiyaCameraSDK/AiyaCameraSDK.h>
+#import <AiyaEffectSDK/AiyaEffectSDK.h>
 
 @interface ZegoVideoFilterDemo()
 @property (atomic) int pendingCount;
@@ -26,8 +26,9 @@
     CVPixelBufferPoolRef pool_;
     int buffer_count_;
     
-    //    ZegoImageFilter* filter_;
-    AiyaEffectHandler *aiyaEffectHandler;
+//----------哎吖科技添加 开始----------
+    AYEffectHandler *effectHandler;
+//----------哎吖科技添加 结束----------
 }
 
 - (void)zego_allocateAndStart:(id<ZegoVideoFilterClient>) client {
@@ -43,26 +44,38 @@
     buffer_count_ = 4;
     self.pendingCount = 0;
     
-    [AiyaLicenseManager initLicense:@"" succ:^{
-        NSLog(@"验证成功");
-    } failed:^(NSString *errMsg) {
-        NSLog(@"验证失败");
-    }];
+//----------哎吖科技添加 开始----------
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(licenseMessage:) name:AiyaLicenseNotification object:nil];
+    [AYLicenseManager initLicense:@"6a3fad4cff5743cab76619b7f5ec42a2"];
     
     queue_ = dispatch_queue_create("video.filter", nil);
     dispatch_async(queue_, ^ {
         
-        aiyaEffectHandler = [[AiyaEffectHandler alloc]init];
-        aiyaEffectHandler.smoothSkinIntensity = 1;
-        aiyaEffectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
-        aiyaEffectHandler.effectPlayCount = 200;
-        aiyaEffectHandler.style = [UIImage imageNamed:@"purityLookup"];
-        aiyaEffectHandler.bigEyesScale = 1.0f;
-        aiyaEffectHandler.slimFaceScale = 1.0f;
-        
+        effectHandler = [[AYEffectHandler alloc] init];
+        effectHandler.smooth = 1;
+        effectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
+        effectHandler.style = [UIImage imageNamed:@"purityLookup"];
+        effectHandler.bigEye = 0.2;
+        effectHandler.slimFace = 0.2;
     });
-    
+//----------哎吖科技添加 结束----------
+
 }
+
+//----------哎吖科技添加 开始----------
+- (void)licenseMessage:(NSNotification *)notifi{
+    
+    AiyaLicenseResult result = [notifi.userInfo[AiyaLicenseNotificationUserInfoKey] integerValue];
+    switch (result) {
+        case AiyaLicenseSuccess:
+            NSLog(@"License 验证成功");
+            break;
+        case AiyaLicenseFail:
+            NSLog(@"License 验证失败");
+            break;
+    }
+}
+//----------哎吖科技添加 结束----------
 
 - (void)zego_stopAndDeAllocate {
     dispatch_sync(queue_, ^ {
@@ -79,7 +92,10 @@
     client_ = nil;
     buffer_pool_ = nil;
     
-    aiyaEffectHandler = nil;
+//----------哎吖科技添加 开始----------
+    effectHandler = nil;
+//----------哎吖科技添加 结束----------
+
 }
 
 - (ZegoVideoBufferType)supportBufferType {
@@ -125,12 +141,10 @@
     dispatch_async(queue_, ^ {
         // * 图像滤镜处理
         //        CVPixelBufferRef output = [filter_ render:pixel_buffer];
-        
-        AIYA_CAMERA_EFFECT_ERROR_CODE errorCode;
-        AIYA_EFFECT_STATUS effectStatus = [aiyaEffectHandler processWithPixelBuffer:output error:&errorCode];
 
-        NSLog(@"aiya_effectStatus : %lu",(unsigned long)effectStatus);
-        NSLog(@"aiya_errorCode : %lu",(unsigned long)errorCode);
+//----------哎吖科技添加 开始----------
+        [effectHandler processWithPixelBuffer:output];
+//----------哎吖科技添加 结束----------
         
         int imageWidth = 0;
         int imageHeight = 0;
