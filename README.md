@@ -8,9 +8,12 @@
 * 从[github下载](https://github.com/aiyaapp/AiyaEffectsWithZegoIOS)
 * 从[oschina下载](http://git.oschina.net/wangyng/AiyaEffectsWithZegoIOS)，国内访问更快
 
-## 3. 反馈与建议
-- 主页: [宝宝特效](http://www.bbtexiao.com)
+## 3. 注意事项
+* AiyaEffectSDK.xcodeproj 需要到 [AiyaEffectsSDK ios](https://github.com/aiyaapp/AiyaEffectsIOS) 项目下载
+
+## 4. 反馈与建议
+- 主页: [宝宝特效](http://www.lansear.cn/product/bbtx)
 - 邮箱: <liudawei@aiyaapp.com>
 - QQ讨论群: 650242833
 
-<a href="http://www.bbtexiao.com/"><img src="doc/logo.png" border="0" alt="宝宝特效" /></a>
+<a href="http://www.lansear.cn/product/bbtx"><img src="doc/logo.png" border="0" alt="宝宝特效" /></a>
