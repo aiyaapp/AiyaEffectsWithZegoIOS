@@ -51,12 +51,13 @@
     queue_ = dispatch_queue_create("video.filter", nil);
     dispatch_async(queue_, ^ {
         
-        effectHandler = [[AYEffectHandler alloc] init];
-        effectHandler.smooth = 1;
-        effectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"gougou"];
+        effectHandler = [[AYEffectHandler alloc] initWithProcessTexture:NO];
         effectHandler.style = [UIImage imageNamed:@"purityLookup"];
+        effectHandler.intensityOfStyle = 0.8;
+        effectHandler.smooth = 1;
         effectHandler.bigEye = 0.2;
         effectHandler.slimFace = 0.2;
+        effectHandler.effectPath = [[NSBundle mainBundle] pathForResource:@"meta" ofType:@"json" inDirectory:@"mogulin"];
     });
 //----------哎吖科技添加 结束----------
 
@@ -86,14 +87,17 @@
     if (pool_) {
         [ZegoLiveApi destroyPixelBufferPool:&pool_];
     }
-    queue_ = nil;
     
     [client_ destroy];
     client_ = nil;
     buffer_pool_ = nil;
     
 //----------哎吖科技添加 开始----------
-    effectHandler = nil;
+    dispatch_sync(queue_, ^ {
+        [effectHandler destroy];
+        effectHandler = nil;
+    });
+    queue_ = nil;
 //----------哎吖科技添加 结束----------
 
 }
@@ -143,7 +147,8 @@
         //        CVPixelBufferRef output = [filter_ render:pixel_buffer];
 
 //----------哎吖科技添加 开始----------
-        [effectHandler processWithPixelBuffer:output];
+        [effectHandler setRotateMode:kAYGPUImageFlipHorizonal];
+        [effectHandler processWithPixelBuffer:output formatType:kCVPixelFormatType_32BGRA];
 //----------哎吖科技添加 结束----------
         
         int imageWidth = 0;

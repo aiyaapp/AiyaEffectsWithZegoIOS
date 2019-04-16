@@ -14,7 +14,7 @@
 		D31F332E1FF3AB6800B042BD /* AiyaEffectSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31F331A1FF3AAEC00B042BD /* AiyaEffectSDK.framework */; };
 		D31F332F1FF3AB6800B042BD /* AiyaEffectSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D31F331A1FF3AAEC00B042BD /* AiyaEffectSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D37EFE201EE55AF700EC6679 /* AiyaEffectSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D37EFE1F1EE55AF700EC6679 /* AiyaEffectSDK.bundle */; };
-		D37EFE401EE564F400EC6679 /* gougou in Resources */ = {isa = PBXBuildFile; fileRef = D37EFE3F1EE55FE800EC6679 /* gougou */; };
+		D3A2919520C29FC20060BBBD /* mogulin in Resources */ = {isa = PBXBuildFile; fileRef = D3A2918F20C29FC20060BBBD /* mogulin */; };
 		D3BA48BB1E77EFBE00AA7526 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA48BA1E77EFBE00AA7526 /* libc++.tbd */; };
 		EF32D6F81D6599B700A764FC /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF32D6F51D6599B700A764FC /* TencentOpenApi_IOS_Bundle.bundle */; };
 		EF32D6FE1D659B5700A764FC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF32D6FD1D659B5700A764FC /* libstdc++.tbd */; };
@@ -168,7 +168,7 @@
 		A7C4F6471DF8123C0027E9ED /* ZegoImageFilter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoImageFilter.framework; sourceTree = "<group>"; };
 		D31F33101FF3AAEC00B042BD /* AiyaEffectSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AiyaEffectSDK.xcodeproj; path = ../../../../AiyaEffectsIOS/AiyaEffectSDK/AiyaEffectSDK.xcodeproj; sourceTree = "<group>"; };
 		D37EFE1F1EE55AF700EC6679 /* AiyaEffectSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AiyaEffectSDK.bundle; sourceTree = "<group>"; };
-		D37EFE3F1EE55FE800EC6679 /* gougou */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gougou; sourceTree = "<group>"; };
+		D3A2918F20C29FC20060BBBD /* mogulin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mogulin; sourceTree = "<group>"; };
 		D3BA48BA1E77EFBE00AA7526 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		EF1314361DAB752000FEBACF /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		EF1314461DAB752000FEBACF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -357,8 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				D31F331A1FF3AAEC00B042BD /* AiyaEffectSDK.framework */,
-				D31F331C1FF3AAEC00B042BD /* libAySDKCore.a */,
-				D31F331E1FF3AAEC00B042BD /* libAyTrack.a */,
+				D31F331C1FF3AAEC00B042BD /* libAyCore.a */,
+				D31F331E1FF3AAEC00B042BD /* libAyFaceTrack.a */,
 				D31F33201FF3AAEC00B042BD /* libAyEffect.a */,
 				D31F33221FF3AAEC00B042BD /* libAyBeauty.a */,
 				D31F33241FF3AAEC00B042BD /* libAyShortVideoEffect.a */,
@@ -369,7 +369,7 @@
 		D3BA48D71E77F00900AA7526 /* AiyaEffectResources */ = {
 			isa = PBXGroup;
 			children = (
-				D37EFE3F1EE55FE800EC6679 /* gougou */,
+				D3A2918F20C29FC20060BBBD /* mogulin */,
 			);
 			name = AiyaEffectResources;
 			path = advanced/AiyaEffectResources;
@@ -687,7 +687,7 @@
 				TargetAttributes = {
 					EFF10EF11D1A297900ECE11E = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = G29KBS7YUL;
+						DevelopmentTeam = 67GM9ZTA2J;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -733,17 +733,17 @@
 			remoteRef = D31F33191FF3AAEC00B042BD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D31F331C1FF3AAEC00B042BD /* libAySDKCore.a */ = {
+		D31F331C1FF3AAEC00B042BD /* libAyCore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libAySDKCore.a;
+			path = libAyCore.a;
 			remoteRef = D31F331B1FF3AAEC00B042BD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D31F331E1FF3AAEC00B042BD /* libAyTrack.a */ = {
+		D31F331E1FF3AAEC00B042BD /* libAyFaceTrack.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libAyTrack.a;
+			path = libAyFaceTrack.a;
 			remoteRef = D31F331D1FF3AAEC00B042BD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -782,7 +782,7 @@
 				EFAC2FCF1D48E0AD000A7885 /* a.pcm in Resources */,
 				EFF10F081D1A297900ECE11E /* LaunchScreen.storyboard in Resources */,
 				D37EFE201EE55AF700EC6679 /* AiyaEffectSDK.bundle in Resources */,
-				D37EFE401EE564F400EC6679 /* gougou in Resources */,
+				D3A2919520C29FC20060BBBD /* mogulin in Resources */,
 				EFF10F051D1A297900ECE11E /* Assets.xcassets in Resources */,
 				EFF10F031D1A297900ECE11E /* Main.storyboard in Resources */,
 			);
@@ -927,7 +927,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = G29KBS7YUL;
+				DEVELOPMENT_TEAM = 67GM9ZTA2J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1005,7 +1005,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = G29KBS7YUL;
+				DEVELOPMENT_TEAM = 67GM9ZTA2J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1129,7 +1129,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = G29KBS7YUL;
+				DEVELOPMENT_TEAM = 67GM9ZTA2J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1157,7 +1157,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = G29KBS7YUL;
+				DEVELOPMENT_TEAM = 67GM9ZTA2J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

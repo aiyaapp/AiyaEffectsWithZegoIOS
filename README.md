@@ -10,6 +10,7 @@
 
 ## 3. 注意事项
 * AiyaEffectSDK.xcodeproj 需要到 [AiyaEffectsSDK ios](https://github.com/aiyaapp/AiyaEffectsIOS) 项目下载
+* [即构版本 zego3](https://github.com/zegodev/ZegoLiveDemo)
 
 ## 4. 反馈与建议
 - 主页: [宝宝特效](http://www.lansear.cn/product/bbtx)
